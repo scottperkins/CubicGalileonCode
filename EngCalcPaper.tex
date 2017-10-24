@@ -1,0 +1,132 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Engineering Calculation Paper
+% LaTeX Template
+% Version 1.0 (20/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Dmitry Volynkin (dim_voly@yahoo.com.au)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,a4paper]{article} % Use A4 paper with a 12pt font size - different paper sizes will require manual recalculation of page margins and border positions
+
+\usepackage{marginnote} % Required for margin notes
+%\usepackage{wallpaper} % Required to set each page to have a background
+%\usepackage{lastpage} % Required to print the total number of pages
+\usepackage[left=1.3cm,right=4.6cm,top=1.8cm,bottom=4.0cm,marginparwidth=3.4cm]{geometry} % Adjust page margins
+\usepackage{amsmath} % Required for equation customization
+\usepackage{amssymb} % Required to include mathematical symbols
+\usepackage{xcolor} % Required to specify colors by name
+
+\usepackage{fancyhdr} % Required to customize headers
+\setlength{\headheight}{80pt} % Increase the size of the header to accommodate meta-information
+\pagestyle{fancy}\fancyhf{} % Use the custom header specified below
+\renewcommand{\headrulewidth}{0pt} % Remove the default horizontal rule under the header
+
+\setlength{\parindent}{0cm} % Remove paragraph indentation
+\newcommand{\tab}{\hspace*{2em}} % Defines a new command for some horizontal space
+
+\newcommand\BackgroundStructure{ % Command to specify the background of each page
+\setlength{\unitlength}{1mm} % Set the unit length to millimeters
+
+
+
+\setlength\fboxsep{0mm} % Adjusts the distance between the frameboxes and the borderlines
+\setlength\fboxrule{0.5mm} % Increase the thickness of the border line
+\put(10, 10){\fcolorbox{black}{blue!10}{\framebox(155,247){}}} % Main content box
+\put(165, 10){\fcolorbox{black}{blue!10}{\framebox(37,247){}}} % Margin box
+\put(10, 262){\fcolorbox{black}{white!10}{\framebox(192, 25){}}} % Header box
+%\put(137, 263){\includegraphics[height=23mm,keepaspectratio]{logo}} % Logo box - maximum height/width: 
+}
+
+%----------------------------------------------------------------------------------------
+%	HEADER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\fancyhead[L]{\begin{tabular}{l r | l r} % The header is a table with 4 columns
+\textbf{Project} & Cubic Galileon Radiation of Non-Relativistic Masses perturbed in Time & \textbf{Page} & \thepage/\pageref{LastPage} \\ % Project name and page count
+%\textbf{Job} & 0001 & \textbf{Updated} & 27/11/2012 \\ % Job number and last updated date
+%\textbf{Version} & Design-1A-RC-001 & \textbf{Reviewed} & 2/12/2012 \\ % Version and reviewed date
+\textbf{Student} & Scott Perkins & \textbf{Reviewer} & Hector Silva and Nico Yunes \\ % Designer and reviewer
+\end{tabular}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%\AddToShipoutPicture{\BackgroundStructure} % Set the background of each page to that specified above in the header information section
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONTENT
+%----------------------------------------------------------------------------------------
+
+\section{Background and General Info for Cubic Galileon and the Project} 
+
+The Cubic Galileon has an action given by equation \ref{eq:1}
+\begin{equation}\label{eq:1}
+\begin{split}
+S = \int d^4x \sqrt{-g} [\frac{R}{2}- \frac{1}{2} \phi_{,\mu} \phi^{,\mu} - \frac{1}{\Lambda^2} \phi_{,\mu} \phi^{,\mu} \Box \phi] + S_m[\tilde{g_{\mu \nu}}], \\
+& \tilde{g_{\mu \nu}} = e^{2 \alpha \phi} g_{\mu \nu}
+\end{split}
+\end{equation}
+ 
+Equation 1 results in the equations of motion for the field given by equation \ref{eq:2}
+\begin{equation}\label{eq:2}
+\Box \phi + \frac{2}{\Lambda^2} [ (\Box \phi)^2 -\nabla_{\mu}\nabla_{\nu}\phi\nabla^{\mu}\nabla^{\nu}\phi] = 8 \pi \alpha \rho
+\end{equation}
+
+First, we will solve equation \ref{eq:2} for a static and spherically symmetric case, giving us the scalar field for a nonrelativistic, stationary mass. We will then take this solution and perturb it temporally, which will give us a small perturbation to the field that will tell us about the possible effects of scalar radiation. 
+\subsection{Spherically Symmetric and Static Assumptions}
+Assuming spherical symmetry and a static metric, all derivatives besides the radial derivative will vanish, resulting in an simplifications given in equation \ref{eq:4}
+
+\begin{equation}\label{eq:4}
+\begin{split}
+\Box \phi = \phi_{,r,r} + \frac{2}{r}\phi_{,r} \\
+& \nabla_{\mu}\nabla_{\nu}\phi\nabla^{\mu}\nabla^{\nu}\phi = \phi_{,r,r}^2 + \frac{2}{r} \phi_{,r}^2
+\end{split}
+\end{equation}
+These simplifications result in the equation of motion for the field in equation \ref{eq:3}.
+\begin{equation}\label{eq:3}
+\phi_[,r,r] + \frac{2}{r} \phi_{,r} + \frac{8}{\Lambda^2 r}\phi_{,r} + \frac{4}{\Lambda^2 r^2}\phi_{,r}^2 = 8 \pi \alpha \rho
+\end{equation}
+
+The solution to this equation will set the stage for our perturbed system, giving us a background solution to overlay our time dependent perturbation. The solution was determined by the shooting method, implemented in Mathematica, and using the initial conditions shown in equation \ref{eq:5}
+\begin{equation}\label{eq:5}
+\begin{split}
+\phi_{,r}(0) = 0 \\
+&\phi_{\infty} = \phi_{cosmological}\\
+& \phi_{<}(r=R) = \phi_{>}(r=R)\\
+&\phi'_{<}(r=R) = \phi'_{>}(r=R)
+\end{split}
+\end{equation}
+where $\phi_{cosmological}$ is the value of the field in vacuum far from any sources, inspired by cosmological measurements. 
+\subsection{Time Perturbation}
+
+The field and source were then perturbed temporally, resulting in a new field and source given in equation \ref{eq:6}
+\begin{equation}\label{eq:6}
+\begin{split}
+\phi \Rightarrow \phi_0 + \delta\phi \\
+&\rho \Rightarrow \rho_0 + \delta \rho Sin(\omega t)
+\end{split}
+\end{equation}
+Incorporating time in the equations of motion for the field result in new operators defined in equation \ref{eq:7}
+\begin{equation}\label{eq:7}
+\begin{split}
+\Box \phi = \phi_{,r,r} + \frac{2}{r}\phi_{,r} -  \\
+& \nabla_{\mu}\nabla_{\nu}\phi\nabla^{\mu}\nabla^{\nu}\phi = \phi_{,r,r}^2 + \frac{2}{r} \phi_{,r}^2
+\end{split}
+\end{equation}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

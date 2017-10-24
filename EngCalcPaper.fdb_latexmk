@@ -1,0 +1,14 @@
+# Fdb version 3
+["pdflatex"] 1508863904 "EngCalcPaper.tex" "EngCalcPaper.pdf" "EngCalcPaper" 1508863904
+  "/home/sperkins/.cache/texlive/texmf-var/web2c/pdftex/pdflatex.fmt" 1506206060 719143 ae104aa791f1ee303c5a3529dd5a81dc ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1459635588 19821 310da678527a7dfe2a02c88af38079b7 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo" 1459635588 8303 1d67e16498f00f63da792fab169302fc ""
+  "/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty" 1465687133 13424 21f094c1fe10950f63994835ed11b6ce ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1488979921 31949 3ae02a131d161fd383f5b89f8ad0930c ""
+  "EngCalcPaper.aux" 1508863904 8 a94a2480d3289e625eea47cd1b285758 ""
+  "EngCalcPaper.tex" 1358718982 5345 36c581c75891687f884dda66098d7a4f ""
+  "wallpaper.sty" 0 -1 0 ""
+  (generated)
+  "EngCalcPaper.pdf"
+  "EngCalcPaper.log"

@@ -1,0 +1,13 @@
+PWD /home/sperkins/Code/CubicGalileonCode/Notes
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /home/sperkins/.cache/texlive/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT EngCalcPaper.tex
+OUTPUT EngCalcPaper.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
